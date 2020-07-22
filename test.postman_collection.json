@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "9b0f0575-35ff-4e94-8459-32194b519535",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Shubham\",\r\n    \"phone\":\"9782970790\",\r\n    \"age\":26\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseuri}}/users/",
+					"host": [
+						"{{baseuri}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseuri}}/users/",
+					"host": [
+						"{{baseuri}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseuri}}/users/5f182ef6ddaf4731a4f41f8e",
+					"host": [
+						"{{baseuri}}"
+					],
+					"path": [
+						"users",
+						"5f182ef6ddaf4731a4f41f8e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete one",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseuri}}/users/5f180f9f48e3a4452c085aeb",
+					"host": [
+						"{{baseuri}}"
+					],
+					"path": [
+						"users",
+						"5f180f9f48e3a4452c085aeb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"vishal\",\r\n    \"phone\":\"9782970792\",\r\n    \"age\":26\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseuri}}/users/5f182efaddaf4731a4f41f8f",
+					"host": [
+						"{{baseuri}}"
+					],
+					"path": [
+						"users",
+						"5f182efaddaf4731a4f41f8f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update picture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profile",
+							"type": "file",
+							"src": "/C:/Users/subhamsoni/Documents/Screenshot_20190104-201907.png"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseuri}}/users/picture/5f182ef6ddaf4731a4f41f8e",
+					"host": [
+						"{{baseuri}}"
+					],
+					"path": [
+						"users",
+						"picture",
+						"5f182ef6ddaf4731a4f41f8e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "picture",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseuri}}/users/picture/5f183a0d318a9b4fb406f146",
+					"host": [
+						"{{baseuri}}"
+					],
+					"path": [
+						"users",
+						"picture",
+						"5f183a0d318a9b4fb406f146"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "17b36372-a75b-47cf-9d45-ced00b981331",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "358199b7-a047-4bc0-90e4-db3ac9114e16",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d0b0f79b-4d44-475b-9828-897339093c89",
+			"key": "baseuri",
+			"value": "http://localhost:3000"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
