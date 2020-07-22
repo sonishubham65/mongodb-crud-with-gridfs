@@ -7,6 +7,7 @@ const mongo = require('mongodb');
 
 var fs = require('fs');
 const formidable = require('formidable');
+const { use } = require('.');
 
 /**
  * @description: insert user
@@ -45,8 +46,13 @@ router.get('/:ID', async function (req, res, next) {
  */
 router.get('/', async function (req, res, next) {
   try {
-    var result = await DB.db().collection("students").find({}).toArray();
-    res.status(200).json({ success: 1, data: result })
+    var users = await DB.db().collection("students").find({}).toArray();
+    users.forEach(user => {
+      if (user.profile) {
+        user.profile = `${process.env.APIHOST}users/picture/${user.profile}`;
+      }
+    })
+    res.status(200).json({ success: 1, data: users })
   } catch (e) {
     res.status(500).json({ success: 0, message: e.message })
   }

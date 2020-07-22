@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb://localhost:27017/nsspl";
-const client = new MongoClient(uri);
+
+const client = new MongoClient(process.env.DBURI);
 var DB;
 client.connect((err, db) => {
     //console.log(db)
