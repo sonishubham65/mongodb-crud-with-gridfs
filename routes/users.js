@@ -33,8 +33,14 @@ router.post('/', function (req, res, next) {
 router.get('/:ID', async function (req, res, next) {
   try {
     var userId = req.params.ID;
-    var result = await DB.db().collection("students").findOne({ _id: ObjectId(userId) });
-    res.status(200).json({ success: 1, data: result })
+    var user = await DB.db().collection("students").findOne({ _id: ObjectId(userId) });
+    if (user) {
+      user.profile = `${process.env.APIHOST}users/picture/${user.profile}`;
+      res.status(200).json({ success: 1, data: user })
+    } else {
+      res.status(204).json({ success: 0 })
+    }
+
   } catch (e) {
     res.status(500).json({ success: 0, message: e.message })
   }
