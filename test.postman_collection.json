@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"Shubham\",\r\n    \"phone\":\"9782970790\",\r\n    \"age\":26\r\n}",
+					"raw": "{\r\n    \"name\":\"rittiza\",\r\n    \"phone\":\"9782970791\",\r\n    \"age\":28\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -34,9 +34,21 @@
 		},
 		{
 			"name": "get all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "{{baseuri}}/users/",
 					"host": [
@@ -56,13 +68,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseuri}}/users/5f182ef6ddaf4731a4f41f8e",
+					"raw": "{{baseuri}}/users/5f23d60593dbaf63e40992e4",
 					"host": [
 						"{{baseuri}}"
 					],
 					"path": [
 						"users",
-						"5f182ef6ddaf4731a4f41f8e"
+						"5f23d60593dbaf63e40992e4"
 					]
 				}
 			},
@@ -73,14 +85,23 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "{{baseuri}}/users/5f180f9f48e3a4452c085aeb",
+					"raw": "{{baseuri}}/users/5f23e8f5f0aca232f047a651",
 					"host": [
 						"{{baseuri}}"
 					],
 					"path": [
 						"users",
-						"5f180f9f48e3a4452c085aeb"
+						"5f23e8f5f0aca232f047a651"
 					]
 				}
 			},
@@ -101,13 +122,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseuri}}/users/5f182efaddaf4731a4f41f8f",
+					"raw": "{{baseuri}}/users/5f23d5fc93dbaf63e40992e3",
 					"host": [
 						"{{baseuri}}"
 					],
 					"path": [
 						"users",
-						"5f182efaddaf4731a4f41f8f"
+						"5f23d5fc93dbaf63e40992e3"
 					]
 				}
 			},
@@ -134,14 +155,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseuri}}/users/picture/5f182ef6ddaf4731a4f41f8e",
+					"raw": "{{baseuri}}/users/picture/5f23d60593dbaf63e40992e4",
 					"host": [
 						"{{baseuri}}"
 					],
 					"path": [
 						"users",
 						"picture",
-						"5f182ef6ddaf4731a4f41f8e"
+						"5f23d60593dbaf63e40992e4"
 					]
 				}
 			},
@@ -191,7 +212,7 @@
 	],
 	"variable": [
 		{
-			"id": "d0b0f79b-4d44-475b-9828-897339093c89",
+			"id": "c8d55bee-67b0-4d18-bb37-45487d690520",
 			"key": "baseuri",
 			"value": "http://localhost:3000"
 		}
